@@ -10,6 +10,8 @@ A breadboard demo on an Arduino Nano:
 
 Both are controlled with typed commands in the Serial Monitor, and both can move at the same time.
 
+> **Credit:** The sketches and schematic in this phase were written by Claude (AI assistant) with me. I wired the circuit, uploaded the code and tested it on the breadboard.
+
 ## Why
 Phase 0 showed both motors work, but the code blocked, so they couldn't move smoothly together. The real tank needs the turret and barrel moving at once without one freezing the other. This phase also moved to a proper shared 5V rail with a common ground.
 

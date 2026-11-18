@@ -8,7 +8,7 @@ I'm building a remote-controlled tank from scratch: tread drive, a turret that r
 
 This is my first real electronics project. I want to actually understand how the pieces work (motors, drivers, power, microcontrollers) instead of just buying something that already works, and I want a project I can work on day by day and look back on. It starts on a breadboard with my starter kit, then moves to drive motors and wireless control, and ends with a custom PCB and a finished tank.
 
-> **Disclaimer:** All of the building, wiring, testing and debugging in this project is my own work. I'm learning as I go from online electrical engineering tutorials, and I use Claude (an AI assistant) to help with formatting and presenting this repo and blog.
+> **Transparency note:** This is my first real electronics project, and I'm building it with a lot of help. I do the physical work myself: wiring, assembly, testing and debugging on the bench. **Claude (an AI assistant by Anthropic) heavily helps me write the code** and also helps write and format this repo and the blog. I'm also learning from online electrical engineering tutorials. My own early sketches (Phase 0) are marked as mine.
 
 ## Parts checklist (finished tank only)
 

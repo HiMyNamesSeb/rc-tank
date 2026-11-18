@@ -3,7 +3,7 @@
 **Status:** ✅ Done
 
 ## What
-My very first sketches for this project. A joystick module controls the SG90 servo and the 28BYJ-48 stepper motor on an Arduino. I wrote two versions:
+My very first sketches for this project, written by me before Claude got involved in the code. A joystick module controls the SG90 servo and the 28BYJ-48 stepper motor on an Arduino. I wrote two versions:
 
 - **[tankV1](tankV1/tankV1.ino):** uses the built-in `Stepper` library.
 - **[tankV2](tankV2/tankV2.ino):** switches to the `AccelStepper` library to get speed control.
