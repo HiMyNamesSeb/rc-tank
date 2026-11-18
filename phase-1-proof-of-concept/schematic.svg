@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1160" height="780" viewBox="0 0 1160 780" font-family="Arial, Helvetica, sans-serif" xmlns:c2pa="http://c2pa.org/manifest">
+  <rect width="1160" height="780" fill="#ffffff"/>
+  <text x="580" y="38" text-anchor="middle" font-size="22" font-weight="bold" fill="#222">RC Tank barrel test: Nano + SG90 servo + 28BYJ-48 stepper</text>
+
+  <!-- ===== Rails ===== -->
+  <line x1="200" y1="110" x2="1120" y2="110" stroke="#d62728" stroke-width="5"/>
+  <line x1="200" y1="150" x2="1120" y2="150" stroke="#222" stroke-width="5"/>
+  <text x="1125" y="105" font-size="14" fill="#d62728" font-weight="bold" text-anchor="end">+5V rail (power module)</text>
+  <text x="1125" y="172" font-size="14" fill="#222" font-weight="bold" text-anchor="end">GND rail (shared ground)</text>
+
+  <!-- ===== Power module ===== -->
+  <rect x="30" y="72" width="170" height="110" rx="8" fill="#e8f1fb" stroke="#1f5fa8" stroke-width="2"/>
+  <text x="115" y="96" text-anchor="middle" font-size="14" font-weight="bold">Breadboard</text>
+  <text x="115" y="113" text-anchor="middle" font-size="14" font-weight="bold">power module</text>
+  <text x="115" y="134" text-anchor="middle" font-size="12">jumper set to 5V</text>
+  <text x="112" y="150" text-anchor="middle" font-size="12">USB in (charger</text>
+  <text x="115" y="164" text-anchor="middle" font-size="12">or 2nd USB port)</text>
+  <text x="196" y="102" font-size="16" font-weight="bold" fill="#d62728" text-anchor="end">+</text>
+  <text x="196" y="140" font-size="18" font-weight="bold" fill="#222" text-anchor="end">−</text>
+
+  <!-- ===== Arduino Nano ===== -->
+  <rect x="60" y="240" width="200" height="400" rx="10" fill="#e6f4ea" stroke="#1e7b3a" stroke-width="2"/>
+  <text x="160" y="350" text-anchor="middle" font-size="20" font-weight="bold" fill="#1e7b3a">Arduino</text>
+  <text x="160" y="374" text-anchor="middle" font-size="20" font-weight="bold" fill="#1e7b3a">Nano</text>
+  <rect x="36" y="580" width="28" height="40" rx="3" fill="#bbb" stroke="#555"/>
+  <text x="50" y="660" text-anchor="middle" font-size="12">USB cable</text>
+  <text x="50" y="675" text-anchor="middle" font-size="12">to computer</text>
+  <!-- Nano pins -->
+  <text x="248" y="305" text-anchor="end" font-size="15" font-weight="bold">D9</text>
+  <text x="248" y="425" text-anchor="end" font-size="15" font-weight="bold">D4</text>
+  <text x="248" y="465" text-anchor="end" font-size="15" font-weight="bold">D5</text>
+  <text x="248" y="505" text-anchor="end" font-size="15" font-weight="bold">D6</text>
+  <text x="248" y="545" text-anchor="end" font-size="15" font-weight="bold">D7</text>
+  <text x="220" y="262" text-anchor="middle" font-size="15" font-weight="bold">GND</text>
+  <text x="105" y="262" text-anchor="middle" font-size="12" fill="#777">5V: leave empty</text>
+
+  <!-- Nano GND to GND rail -->
+  <line x1="220" y1="240" x2="220" y2="150" stroke="#222" stroke-width="3"/>
+  <circle cx="220" cy="150" r="6" fill="#222"/>
+  <text x="228" y="205" font-size="12" fill="#222">ties grounds together</text>
+
+  <!-- ===== SG90 servo ===== -->
+  <rect x="440" y="250" width="200" height="100" rx="8" fill="#fff4e0" stroke="#c77700" stroke-width="2"/>
+  <text x="560" y="300" text-anchor="middle" font-size="16" font-weight="bold">SG90 servo</text>
+  <text x="560" y="320" text-anchor="middle" font-size="13">barrel elevation</text>
+  <!-- D9 to signal -->
+  <line x1="260" y1="300" x2="440" y2="300" stroke="#ff8c00" stroke-width="3"/>
+  <text x="350" y="292" text-anchor="middle" font-size="12" fill="#c77700">orange = signal</text>
+  <!-- servo GND (brown) -->
+  <line x1="470" y1="250" x2="470" y2="150" stroke="#8b4513" stroke-width="3"/>
+  <circle cx="470" cy="150" r="6" fill="#222"/>
+  <text x="464" y="240" text-anchor="end" font-size="12" fill="#8b4513">brown</text>
+  <!-- servo +5V (red) with hop over GND rail -->
+  <path d="M520 250 L520 158 A8 8 0 0 0 520 142 L520 110" fill="none" stroke="#d62728" stroke-width="3"/>
+  <circle cx="520" cy="110" r="6" fill="#d62728"/>
+  <text x="527" y="240" font-size="12" fill="#d62728">red</text>
+
+  <!-- ===== 100uF capacitor between rails ===== -->
+  <line x1="600" y1="110" x2="600" y2="125" stroke="#555" stroke-width="2"/>
+  <line x1="588" y1="125" x2="612" y2="125" stroke="#555" stroke-width="3"/>
+  <path d="M588 137 Q600 131 612 137" fill="none" stroke="#555" stroke-width="3"/>
+  <line x1="600" y1="134" x2="600" y2="150" stroke="#555" stroke-width="2"/>
+  <circle cx="600" cy="110" r="4" fill="#d62728"/>
+  <circle cx="600" cy="150" r="4" fill="#222"/>
+  <text x="583" y="124" font-size="12" text-anchor="end" fill="#555">+</text>
+  <text x="560" y="78" font-size="12" fill="#555">100µF cap (optional), next to servo</text>
+  <text x="560" y="92" font-size="12" fill="#555">long leg to +5V, striped leg to GND</text>
+
+  <!-- ===== ULN2003 board ===== -->
+  <rect x="440" y="400" width="260" height="180" rx="8" fill="#eef0ff" stroke="#3a3fb0" stroke-width="2"/>
+  <text x="590" y="480" text-anchor="middle" font-size="16" font-weight="bold">ULN2003</text>
+  <text x="590" y="500" text-anchor="middle" font-size="16" font-weight="bold">driver board</text>
+  <text x="458" y="425" font-size="13" font-weight="bold">IN1</text>
+  <text x="458" y="465" font-size="13" font-weight="bold">IN2</text>
+  <text x="458" y="505" font-size="13" font-weight="bold">IN3</text>
+  <text x="458" y="545" font-size="13" font-weight="bold">IN4</text>
+  <text x="648" y="420" font-size="14" font-weight="bold" text-anchor="middle">−</text>
+  <text x="680" y="420" font-size="14" font-weight="bold" text-anchor="middle">+</text>
+  <!-- D4-D7 to IN1-IN4 -->
+  <line x1="260" y1="420" x2="440" y2="420" stroke="#1f77b4" stroke-width="3"/>
+  <line x1="260" y1="460" x2="440" y2="460" stroke="#2ca02c" stroke-width="3"/>
+  <line x1="260" y1="500" x2="440" y2="500" stroke="#9467bd" stroke-width="3"/>
+  <line x1="260" y1="540" x2="440" y2="540" stroke="#e6b800" stroke-width="3"/>
+  <!-- ULN power -->
+  <line x1="648" y1="400" x2="648" y2="150" stroke="#222" stroke-width="3"/>
+  <circle cx="648" cy="150" r="6" fill="#222"/>
+  <path d="M680 400 L680 158 A8 8 0 0 0 680 142 L680 110" fill="none" stroke="#d62728" stroke-width="3"/>
+  <circle cx="680" cy="110" r="6" fill="#d62728"/>
+  <text x="694" y="380" font-size="12" fill="#555">5-12V pins</text>
+  <text x="694" y="394" font-size="12" fill="#555">(keep ON jumper on)</text>
+
+  <!-- ===== 28BYJ-48 motor ===== -->
+  <rect x="700" y="452" width="16" height="76" fill="#fff" stroke="#555" stroke-width="2"/>
+  <line x1="716" y1="460" x2="850" y2="460" stroke="#1f5fd0" stroke-width="3"/>
+  <line x1="716" y1="475" x2="850" y2="475" stroke="#ff69b4" stroke-width="3"/>
+  <line x1="716" y1="490" x2="850" y2="490" stroke="#e6c200" stroke-width="3"/>
+  <line x1="716" y1="505" x2="850" y2="505" stroke="#ff8c00" stroke-width="3"/>
+  <line x1="716" y1="520" x2="850" y2="520" stroke="#d62728" stroke-width="3"/>
+  <text x="783" y="448" text-anchor="middle" font-size="12" fill="#555">white 5-pin plug</text>
+  <text x="783" y="545" text-anchor="middle" font-size="12" fill="#555">(only fits one way)</text>
+  <circle cx="920" cy="490" r="72" fill="#f2f2f2" stroke="#555" stroke-width="2"/>
+  <circle cx="920" cy="490" r="12" fill="#999"/>
+  <text x="920" y="590" text-anchor="middle" font-size="16" font-weight="bold">28BYJ-48 stepper</text>
+  <text x="920" y="609" text-anchor="middle" font-size="13">turret rotation</text>
+
+  <!-- ===== Notes ===== -->
+  <rect x="300" y="640" width="820" height="120" rx="8" fill="#fafafa" stroke="#ccc"/>
+  <text x="316" y="664" font-size="14" font-weight="bold">Notes</text>
+  <text x="316" y="686" font-size="13">• Nano is powered only by the computer USB. Do NOT connect the power module + rail to the Nano 5V pin.</text>
+  <text x="316" y="706" font-size="13">• Every GND (Nano, power module, servo, ULN2003) must meet on the GND rail, or nothing will move right.</text>
+  <text x="316" y="726" font-size="13">• Bumps on the red wires mean they jump over the GND rail (no connection there). Dots = connection.</text>
+  <text x="316" y="746" font-size="13">• Some breadboard rails are split in the middle: add a short jumper across the gap if yours is.</text>
+<metadata><c2pa:manifest>AAAWgmp1bWIAAAAeanVtZGMycGEAEQAQgAAAqgA4m3EDYzJwYQAAABZcanVtYgAAAEdqdW1kYzJtYQARABCAAACqADibcQN1cm46YzJwYTo4ZDRkODRiMS04YjcyLTQwMzEtOWUzYS03YjJhYWY1YmM1NzAAAAADl2p1bWIAAAApanVtZGMyYXMAEQAQgAAAqgA4m3EDYzJwYS5hc3NlcnRpb25zAAAAALxqdW1iAAAARGp1bWRjYm9yABEAEIAAAKoAOJtxE2MycGEuaW5ncmVkaWVudC52MwAAAAAYYzJzaM0w0qseKGsQsLedl7Y2A3oAAABwY2JvcqNpZGM6Zm9ybWF0bWltYWdlL3N2Zyt4bWxqaW5zdGFuY2VJRHgseG1wOmlpZDoyOGNmYmQ0ZS1lZmU0LTQwN2ItOGE4Ny1iM2YzZWJkMTM2ZWNscmVsYXRpb25zaGlwaHBhcmVudE9mAAAB4mp1bWIAAABBanVtZGNib3IAEQAQgAAAqgA4m3ETYzJwYS5hY3Rpb25zLnYyAAAAABhjMnNo1FWxTRSZsDeVqRO6sfHz8gAAAZljYm9yomdhY3Rpb25zgqJmYWN0aW9ua2MycGEub3BlbmVkanBhcmFtZXRlcnOha2luZ3JlZGllbnRzgaJjdXJseC1zZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmluZ3JlZGllbnQudjNkaGFzaFggO4lpoTx/Gnb9nISVtuNUlyWXA08P69m/xlc5vxgOZVSkZmFjdGlvbngdY29tLmFudGhyb3BpYy5jbGF1ZGUucHJvdmlkZWRqcGFyYW1ldGVyc6F4H2NvbS5hbnRocm9waWMub3JpZ2luLWNvbmZpZGVuY2VndW5rbm93bmtkZXNjcmlwdGlvbnhmQ2xhdWRlIHByb3ZpZGVkIHRoaXMgZmlsZSBhdCB0aGUgcmVxdWVzdCBvZiBhIHVzZXIgYW5kIG1heSBoYXZlIGNyZWF0ZWQgb3IgbW9kaWZpZWQgdGhlIGZpbGUgY29udGVudHMubXNvZnR3YXJlQWdlbnShZG5hbWVmQ2xhdWRlcmFsbEFjdGlvbnNJbmNsdWRlZPUAAADIanVtYgAAAEBqdW1kY2JvcgARABCAAACqADibcRNjMnBhLmhhc2guZGF0YQAAAAAYYzJzaB07ZBMcHvVHxd+8kXx9Gm8AAACAY2JvcqVjYWxnZnNoYTI1NmNwYWRMAAAAAAAAAAAAAAAAZGhhc2hYICJI2ySlGr8fSGFrAiLq0F7YMCzEYuOjkBIyNX5Ncx7VZG5hbWVuanVtYmYgbWFuaWZlc3RqZXhjbHVzaW9uc4GiZXN0YXJ0GSBWZmxlbmd0aBkeBAAAAj5qdW1iAAAAJ2p1bWRjMmNsABEAEIAAAKoAOJtxA2MycGEuY2xhaW0udjIAAAACD2Nib3KlY2FsZ2ZzaGEyNTZpc2lnbmF0dXJleE1zZWxmI2p1bWJmPS9jMnBhL3VybjpjMnBhOjhkNGQ4NGIxLThiNzItNDAzMS05ZTNhLTdiMmFhZjViYzU3MC9jMnBhLnNpZ25hdHVyZWppbnN0YW5jZUlEeCx4bXA6aWlkOmRkMmY3NDJjLTc0YjYtNGE5MC05OTdiLTVmNWRkOTk5NTQ5Y3JjcmVhdGVkX2Fzc2VydGlvbnODomN1cmx4LXNlbGYjanVtYmY9YzJwYS5hc3NlcnRpb25zL2MycGEuaW5ncmVkaWVudC52M2RoYXNoWCA7iWmhPH8adv2chJW241SXJZcDTw/r2b/GVzm/GA5lVKJjdXJseCpzZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmFjdGlvbnMudjJkaGFzaFggjN4OoH2mk2x0mgI853l7/EMYwNi26meLyHlQO1tNJw+iY3VybHgpc2VsZiNqdW1iZj1jMnBhLmFzc2VydGlvbnMvYzJwYS5oYXNoLmRhdGFkaGFzaFggV15nek/3HQNbogVk9dl3i0bfJDKyW8Tlcrs7PAc20210Y2xhaW1fZ2VuZXJhdG9yX2luZm+jZG5hbWVvQW50aHJvcGljIEZpbGVzZ3ZlcnNpb25lMS4wLjBrc3BlY1ZlcnNpb25lMi40LjAAABA4anVtYgAAAChqdW1kYzJjcwARABCAAACqADibcQNjMnBhLnNpZ25hdHVyZQAAABAIY2JvctKEWQISogEmGCFZAgowggIGMIIBjaADAgECAhRA5aAK7sI50L64g/oGQgU9Z1UTADAKBggqhkjOPQQDAzBJMRcwFQYDVQQKEw5BbnRocm9waWMsIFBCQzEuMCwGA1UEAxMlQW50aHJvcGljIENvbnRlbnQgQ3JlZGVudGlhbHMgUm9vdCBDQTAeFw0yNjA4MDcxODQzNTZaFw0yODA4MDYxOTQzNTZaMEQxFzAVBgNVBAoTDkFudGhyb3BpYywgUEJDMSkwJwYDVQQDEyBBbnRocm9waWMgQ2xhdWRlIENvbnRlbnQgU2lnbmluZzBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABJh6CmvLUBgFFNU0vUKlOVtE6djd17L5SuwX0LemFisBM3dkd/3cyjxFA3Qo5S46fX0/ihY0VZ7mfb9KF703t5OjWDBWMA4GA1UdDwEB/wQEAwIHgDAVBgNVHSUEDjAMBgorBgEEAYPoXgIBMAwGA1UdEwEB/wQCMAAwHwYDVR0jBBgwFoAUzlHiBIFOZFsj+OPEz5o+nMHXXMIwCgYIKoZIzj0EAwMDZwAwZAIwMXMdFJ4BetLLVY7ORuE9noqbbAZOZn/aArXyTwFAZfKrPzxF2vPoJNf1+UCdg1XGAjBwX1zd9WGqYkqmL5SFqw1QySjr1zJfpJM9+1rdDwSPLMOPOjKuiXjoU/pUUeG9RwmhY3BhZFkNngAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPZYQCxxk/UiWWUGM9yTkvDws30WN1dMmnG0oAL2BWQccBibZeUF06KlYGBmCZhOLllq+v36TLvKe9H+Y9ozOnd9RVw=</c2pa:manifest></metadata></svg>
