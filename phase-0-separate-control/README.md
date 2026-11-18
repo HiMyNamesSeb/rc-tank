@@ -48,5 +48,8 @@ The stepper is created with pins in the order `8, 10, 9, 11` (IN1, IN3, IN2, IN4
 - In V2, `runSpeed()` only takes at most one step each time it's called, and the `delay(30)` in the loop means it only gets called about 33 times a second. So the stepper can never go faster than about 33 steps/sec, no matter where the joystick is.
 - Both of these pointed to the fix in Phase 1: write the loop so it never waits, and only move each motor when it's time to.
 
+## Notes from the bench
+- I almost short circuited everything a few times, but learning about potentiometers, buttons and the joystick was a good learning experience. The joystick was a lot more responsive to my movements.
+
 ## Blog days
 - [Day 1 - Proof of concept](https://github.com/HiMyNamesSeb/Blogs/blob/main/rc-tank-project/d1-proof-of-concept.md)
