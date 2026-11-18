@@ -87,6 +87,12 @@ The loop never waits. Every pass it checks for a typed command, then moves the s
 - The Nano runs from the computer's USB, and the motors run from the power module's 5V rail. The two only share ground.
 
 ## Notes from the bench
+<p align="center">
+  <img src="media/servo-on-stepper-bottle-opener.jpg" alt="SG90 micro servo mounted on top of a 28BYJ-48 stepper motor using a white silicone bottle opener from the Equitable career fair, with jumper wires running to a breadboard and Arduino Nano" width="420">
+  <br>
+  <em>Test turret: the SG90 servo (barrel) sitting on the 28BYJ-48 stepper (turret), held together with the Equitable bottle opener.</em>
+</p>
+
 - **Test mount:** to hold the servo and stepper together like the finished turret would be, I mounted the servo on top of the stepper motor using a silicone bottle opener I got from the Equitable career fair.
 - **Broken DC motor:** earlier the same day I was working with a DC motor and snapped its connected cables. I soldered them back on, but I think I did something wrong, because the motor stopped working afterwards. Something to check before I use it again.
 
