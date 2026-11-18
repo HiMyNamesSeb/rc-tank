@@ -88,7 +88,7 @@ The loop never waits. Every pass it checks for a typed command, then moves the s
 
 ## Notes from the bench
 - **Test mount:** to hold the servo and stepper together like the finished turret would be, I mounted the servo on top of the stepper motor using a silicone can opener I got from a career fair.
-- **Broken DC motor:** earlier the same day I was working with a DC motor and snapped its connected cables. I soldered them back on, but I think I did something wrong, because the motor stopped working afterwards. Something to check before the drive phase.
+- **Broken DC motor:** earlier the same day I was working with a DC motor and snapped its connected cables. I soldered them back on, but I think I did something wrong, because the motor stopped working afterwards. Something to check before I use it again.
 
 ## Blog days
 - [Day 1 - Proof of concept](https://github.com/HiMyNamesSeb/Blogs/blob/main/rc-tank-project/d1-proof-of-concept.md)

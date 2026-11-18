@@ -6,7 +6,7 @@
 
 I'm building a remote-controlled tank from scratch: tread drive, a turret that rotates left and right, and a barrel that tilts up and down, all controlled wirelessly from my phone over Bluetooth.
 
-This is my first real electronics project. I want to actually understand how the pieces work (motors, drivers, power, microcontrollers) instead of just buying something that already works, and I want a project I can work on day by day and look back on. It starts on a breadboard with my starter kit, then moves to drive motors and wireless control, and ends with a custom PCB and a finished tank.
+This is my first real electronics project. I want to actually understand how the pieces work (motors, drivers, power, microcontrollers) instead of just buying something that already works, and I want a project I can work on day by day and look back on. It started on a breadboard with my starter kit, and the loose idea is to end up with a custom PCB and a finished tank, figuring out the steps in between as I go.
 
 > **Transparency note:** This is my first real electronics project, and I'm building it with a lot of help. I do the physical work myself: wiring, assembly, testing and debugging on the bench. **Claude (an AI assistant by Anthropic) heavily helps me write the code** and also helps write and format this repo and the blog. I'm also learning from online electrical engineering tutorials. My own early sketches (Phase 0) are marked as mine.
 
@@ -36,20 +36,17 @@ Status key: `(already have in kit)` · `(salvaged)` · `(bought)` · `(not bough
 - [x] 100µF electrolytic capacitor (smooths servo power) `(already have in kit)`
 
 **Board and wiring**
-- [ ] Custom PCB (designed in Phase 5) `(not bought yet)`
+- [ ] Custom PCB `(not bought yet)`
 - [x] Jumper wires / Dupont cables `(already have in kit)`
 
 ## Phases
+
+I don't plan phases ahead. Each one gets added here when I actually start it, named for what I ended up doing (building, debugging, cleaning up, whatever it turns out to be).
 
 | # | Phase | Status |
 |---|---|---|
 | 0 | [Separate control experiments](phase-0-separate-control/) | ✅ Done |
 | 1 | [Proof of concept: barrel + turret demo](phase-1-proof-of-concept/) | ✅ Done |
-| 2 | [Drive and treads](phase-2-drive-treads/) | ⏳ Not started |
-| 3 | [Wireless control (ESP32 Bluetooth)](phase-3-wireless-control/) | ⏳ Not started |
-| 4 | [Chassis integration](phase-4-chassis-integration/) | ⏳ Not started |
-| 5 | [Custom PCB](phase-5-custom-pcb/) | ⏳ Not started |
-| 6 | [Final build](phase-6-final-build/) | ⏳ Not started |
 
 ### Phase 0: Separate control experiments
 - **What:** My very first sketches. Controlling the SG90 servo and the 28BYJ-48 stepper with a joystick module, first with the built-in `Stepper` library (V1), then with `AccelStepper` (V2).
@@ -61,27 +58,4 @@ Status key: `(already have in kit)` · `(salvaged)` · `(bought)` · `(not bough
 - **Why:** Phase 0 showed the motors work, but they couldn't move smoothly together. The real tank needs both moving at once without one freezing the other.
 - **Goal:** Both motors moving together with non-blocking code, on a proper shared 5V rail and common ground.
 
-### Phase 2: Drive and treads
-- **What:** Two DC gear motors on a tread chassis, driven by a TB6612FNG motor driver.
-- **Why:** A tank has to drive. This is the first time dealing with bigger motors and a real battery.
-- **Goal:** Forward, reverse and turning in place, powered from the battery through the buck converter.
-
-### Phase 3: Wireless control
-- **What:** Move the brains to an ESP32 and control everything over Bluetooth from my phone.
-- **Why:** Bluetooth is cheaper and easier than a hobby RC transmitter, and range isn't a concern for this tank.
-- **Goal:** Drive, turret and barrel all controllable from the phone.
-
-### Phase 4: Chassis integration
-- **What:** Mount the turret, barrel, electronics and battery on the chassis.
-- **Why:** Breadboard wiring has to survive vibration and fit inside the hull.
-- **Goal:** A working tank that is still running on prototype wiring.
-
-### Phase 5: Custom PCB
-- **What:** Design a PCB that replaces the breadboard: ESP32, motor drivers, buck converter and connectors on one board.
-- **Why:** Cleaner, smaller and more reliable than jumper wires, and a chance to learn PCB design.
-- **Goal:** Order and assemble a board that drops into the chassis.
-
-### Phase 6: Final build
-- **What:** Final assembly, tuning and polish.
-- **Why:** Finish the project properly.
-- **Goal:** A finished RC tank I can drive around and show off.
+_The next phase gets added when it starts._
